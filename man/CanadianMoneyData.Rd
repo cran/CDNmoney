@@ -44,7 +44,7 @@
 \details{
 	Several data objects are loaded, as listed in the table below. The first
 	usage loads the version most recently added to the package and other
-	usage loads data as of a given data. (At present the two are the
+	usage loads data as of a given date. (At present the two are the
 	same.)
 	
 	These data are the components of the Canadian Monetary aggregates.
@@ -98,35 +98,37 @@
 The following table indicates how these components are added for the Bank of
 Canada monetary aggregates. The column on the left indicates how they are
 combined to form components for the dfa approach (Gilbert and Pichette, 2003).
-\tabular{ccccccccccc}{
-    \tab                \tab             \tab       \tab netM1= \tab     \tab      \tab       \tab      \tab      \tab \cr
-    \tab                \tab             \tab grossM1\tab totalM1\tab M1+ \tab M1++ \tab  M2   \tab M2+  \tab M2++  \tab M3 \cr
-comp. \tab              \tab             \tab B2054  \tab B2033 \tab B2060\tab B2061\tab B2031 \tab B2037 \tab B2059 \tab B2030 \cr 
- \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \cr
-   \tab                 \tab float MB476    \tab + \tab   -   \tab  +  \tab   + \tab    -  \tab  -  \tab   -  \tab  - \cr
-   \tab                 \tab TMLinterbank   \tab X \tab   X   \tab     \tab     \tab 	   \tab     \tab      \tab    \cr
-   \tab                 \tab MB452adj       \tab   \tab       \tab  X  \tab     \tab 	   \tab     \tab      \tab    \cr
-   \tab                 \tab MB473adj       \tab   \tab       \tab     \tab   X \tab 	   \tab     \tab      \tab    \cr
-   \tab                 \tab CUadj          \tab   \tab       \tab     \tab   X \tab 	   \tab     \tab      \tab    \cr
- \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \cr
- 1 \tab currency         \tab MB2001         \tab X \tab   X   \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 2 \tab PCA              \tab MB486         \tab X \tab   X   \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 4 \tab CA other demand  \tab MB487PLUS     \tab X \tab   X   \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 2 \tab pers cheq        \tab MB452         \tab   \tab       \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 6 \tab pers notice, n-ch\tab MB453         \tab   \tab       \tab     \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 3 \tab                 \tab NonbankCheq    \tab   \tab       \tab  X  \tab   X \tab       \tab  X  \tab   X  \tab    \cr
- 4 \tab N-P cheq notice  \tab MB472         \tab   \tab       \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 4 \tab N-P non-cheq     \tab MB473         \tab   \tab       \tab     \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
- 6 \tab                 \tab NonbankNonCheq \tab   \tab       \tab     \tab   X \tab       \tab  X  \tab   X  \tab    \cr
- 6 \tab pers savings     \tab MB454         \tab   \tab       \tab     \tab     \tab    X  \tab  X  \tab   X  \tab  X \cr
- 6 \tab                 \tab NonbankTerm    \tab   \tab       \tab     \tab     \tab       \tab  X  \tab   X  \tab    \cr
- 6 \tab life insur       \tab MB2046        \tab   \tab       \tab     \tab     \tab       \tab  X  \tab   X  \tab    \cr
- 6 \tab dep at gov inst  \tab MB2047        \tab   \tab       \tab     \tab     \tab       \tab  X  \tab   X  \tab    \cr
- 6 \tab mmmf             \tab MB2048        \tab   \tab       \tab     \tab     \tab       \tab  X  \tab   X  \tab    \cr
- 6 \tab CSB              \tab MB2057        \tab   \tab       \tab     \tab     \tab       \tab     \tab   X  \tab    \cr
- 6 \tab non-mmmf         \tab MB2058        \tab   \tab       \tab     \tab     \tab       \tab     \tab   X  \tab    \cr
- 5 \tab N-P term dep     \tab MB475         \tab   \tab       \tab     \tab     \tab       \tab     \tab      \tab  X \cr
- 6 \tab Fgn curr dep     \tab MB482         \tab   \tab       \tab     \tab     \tab       \tab     \tab      \tab  X \cr
+\newpage
+\tabular{lccccccccc}{
+ \tab  \tab ----- \tab ---- \tab ---- \tab Monetary \tab Aggregate \tab ---- \tab ---- \tab ---- \cr
+    \tab  	      \tab	  \tab netM1= \tab     \tab	 \tab	    \tab      \tab	\tab \cr
+    \tab  	      \tab grossM1\tab totalM1\tab M1+ \tab M1++ \tab  M2   \tab M2+  \tab M2++  \tab M3 \cr
+comp. \tab variable (ID) \tab B2054  \tab B2033 \tab B2060\tab B2061\tab B2031 \tab B2037 \tab B2059 \tab B2030 \cr 
+ \tab  \tab \tab \tab \tab \tab \tab \tab \tab \cr
+ 1 \tab MB2001        \tab X \tab   X   \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 2 \tab MB486	      \tab X \tab   X	\tab  X  \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 4 \tab MB487PLUS     \tab X \tab   X	\tab  X  \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 2 \tab MB452	      \tab   \tab	\tab  X  \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 6 \tab MB453	      \tab   \tab	\tab	 \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 3 \tab NonbankCheq   \tab   \tab	\tab  X  \tab	X \tab       \tab  X  \tab   X  \tab	\cr
+ 4 \tab MB472	      \tab   \tab	\tab  X  \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 4 \tab MB473	      \tab   \tab	\tab	 \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 6 \tab NonbankNonCheq \tab   \tab	 \tab	  \tab   X \tab       \tab  X  \tab   X  \tab	 \cr
+ 6 \tab MB454	      \tab   \tab	\tab	 \tab	  \tab    X  \tab  X  \tab   X  \tab  X \cr
+ 6 \tab NonbankTerm   \tab   \tab	\tab	 \tab	  \tab       \tab  X  \tab   X  \tab	\cr
+ 6 \tab MB2046        \tab   \tab	\tab	 \tab	  \tab       \tab  X  \tab   X  \tab	\cr
+ 6 \tab MB2047        \tab   \tab	\tab	 \tab	  \tab       \tab  X  \tab   X  \tab	\cr
+ 6 \tab MB2048        \tab   \tab	\tab	 \tab	  \tab       \tab  X  \tab   X  \tab	\cr
+ 6 \tab MB2057        \tab   \tab	\tab	 \tab	  \tab       \tab     \tab   X  \tab	\cr
+ 6 \tab MB2058        \tab   \tab	\tab	 \tab	  \tab       \tab     \tab   X  \tab	\cr
+ 5 \tab MB475	      \tab   \tab	\tab	 \tab	  \tab       \tab     \tab	\tab  X \cr
+ 6 \tab MB482	      \tab   \tab	\tab	 \tab	  \tab       \tab     \tab	\tab  X \cr
+ \tab \tab \tab \tab \tab \tab \tab \tab \tab \cr
+   \tab float MB476    \tab + \tab   -   \tab  +  \tab   + \tab    -  \tab  -  \tab   -  \tab  - \cr
+   \tab TMLinterbank   \tab X \tab   X   \tab	  \tab     \tab       \tab     \tab	 \tab	 \cr
+   \tab MB452adj       \tab   \tab	 \tab  X  \tab     \tab       \tab     \tab	 \tab	 \cr
+   \tab MB473adj       \tab   \tab	 \tab	  \tab   X \tab       \tab     \tab	 \tab	 \cr
+   \tab CUadj	       \tab   \tab	 \tab	  \tab   X \tab       \tab     \tab	 \tab	 \cr
 }
 
  X- included\cr  
@@ -149,7 +151,7 @@ CUadj  changes an estimate of NonbankNonCheq/NonbankTerm split prior
 to April 1996. This only affects M1++.
 
 The components in this database are not seasonally adjusted, but the
-corresponding Bank of Canada/Statistics Cananada B numbers for the seasonally 
+corresponding Bank of Canada/Statistics Canada B numbers for the seasonally 
 adjusted aggregates are as follows:
 
 \tabular{ccc}{
@@ -176,16 +178,17 @@ adjusted aggregates are as follows:
 \references{
 	Gilbert, P.D. and L. Pichette (2003) "Dynamic Factor Analysis for 
 	   Measuring Money." Bank of Canada
-	   Working Paper 2003-21. <www.bank-banque-canada.ca/pgilbert>}.
+	   Working Paper 2003-21. \url{http://www.bank-banque-canada.ca/pgilbert}.
+
 	Kottaras, J. (2003) "The Construction of Continuity-Adjusted Monetary
 	   Aggregate Components." Bank of Canada Working Paper 2003-22.
-	   <www.bank-banque-canada.ca>}
+	   \url{http://www.bank-banque-canada.ca}
 }
 
 \examples{
  require("tframe")
  data("CanadianMoneyData", package="CDNmoney")
- cat("################ Calculations to get monetary aggregates\n")
+########### Calculations to get monetary aggregates ######
 
  M1gross <-  tframed(MB2001 + MB486 + MB487p + TMLinterbank, names="gross M1 (B2054)")
  M1p     <-  tframed(MB2001 + MB486 + MB487p + MB452 + MB452adj + MB472
@@ -198,7 +201,7 @@ adjusted aggregates are as follows:
  M2pp    <-  tframed(M2p   + MB2057 + MB2058, names="M2++ (B2059)")
  M3      <-  tframed(M2    + MB475  + MB482, names="M3 (B2030)")
 
- cat("################ Calculations of cpi and pop\n")
+######### Calculations of cpi and pop ######
 
  #  M1real = M1total * 100/p100000  (CPI - p20 Bank of Canada Weekly Financial
  #	 Statistics, June 1992=100)
@@ -211,14 +214,14 @@ adjusted aggregates are as follows:
  popm <- M1total / M1PerCapita
  seriesNames(popm) <- "Population of Canada"
 
- cat("################ Plot aggregates\n")
+######### Plot aggregates #####
 
  tfplot(tbind(M1total, M1gross, M1p, M1pp))
  tfplot(tbind(M1PerCapita, M1real))
  tfplot(tbind(M2, M2p, M2pp))
  tfplot(M3)
 
-cat("######## Calculations to get components as used in Gilbert and Pichette\n")
+#### Calculations to get components as used in Gilbert and Pichette ####
 
 z <-tfwindow(tframed(tbind(
      MB2001,
@@ -241,7 +244,7 @@ tfplot(MBcomponents, graphs.per.page=3)
 }
 
 \seealso{
-	\code{\link[tframe]{tframe}},
+	\code{\link[tframe]{tframe}in the dse bundle of packages}, and
 	\code{\link[dfa]{dfa}}
 }
 \keyword{datasets}

@@ -1,4 +1,4 @@
-# compare this file with tests and calculations in data/createDB.R
+
 require("CDNmoney")
 
 data("CanadianMoneyData.asof.26Aug2002", package="CDNmoney")
