@@ -1,6 +1,8 @@
 \name{CanadianMoneyData}
 \docType{data}
 \alias{CanadianMoneyData}
+\alias{CanadianMoneyData.asof.28Jan2005}
+\alias{CanadianMoneyData.asof.6Feb2004}
 \alias{CanadianMoneyData.asof.26Aug2002}
 \alias{MB2001}
 \alias{MB486}
@@ -34,6 +36,8 @@
 
 \usage{
 	data(CanadianMoneyData)
+	data(CanadianMoneyData.asof.28Jan2005)
+	data(CanadianMoneyData.asof.6Feb2004)
 	data(CanadianMoneyData.asof.26Aug2002)
 }
 
@@ -42,10 +46,9 @@
 }
 
 \details{
-	Several data objects are loaded, as listed in the table below. The first
-	usage loads the version most recently added to the package and other
-	usage loads data as of a given date. (At present the two are the
-	same.)
+	Several data objects are loaded, as listed in the table below. The 
+	\code{CanadianMoneyData} usage loads the most recently version and 
+	other usages loads data as of a given date.
 	
 	These data are the components of the Canadian Monetary aggregates.
 	They have been "continuity adjusted" so that take-overs and mergers do
@@ -58,6 +61,12 @@
 	at various  dates but continuity adjustments prior to 1981 are not 
 	complete. More details about the adjustment are provided 
 	in Kottaras (2003).
+
+	The originally released data is usually very accurate because of
+	bank reporting requirements. Beware that continuity adjustments
+	described above are the main reason for revisions to the data. For this
+	reason the "as of" data may not be especially useful for some kinds of
+	data revision studies.
 
 \tabular{lll}{
  variable (ID)   \tab short description    \tab longer description \cr 
@@ -97,7 +106,7 @@
 
 The following table indicates how these components are added for the Bank of
 Canada monetary aggregates. The column on the left indicates how they are
-combined to form components for the dfa approach (Gilbert and Pichette, 2003).
+combined to form components for factor estimates as in Gilbert and Pichette (2003).
 \newpage
 \tabular{lccccccccc}{
  \tab  \tab ----- \tab ---- \tab ---- \tab Monetary \tab Aggregate \tab ---- \tab ---- \tab ---- \cr
@@ -135,10 +144,6 @@ comp. \tab variable (ID) \tab B2054  \tab B2033 \tab B2060\tab B2061\tab B2031 \
  + float is in\cr
  - float is out\cr
 
-pers - personal\cr
-N-P - non-personal\cr
-dep - deposits\cr
-
 NonbankCheq	 = TMLCHEQPLUS + LCUCHEQPLUS\cr
 NonbankNonCheq  = TMLNCPLUSPLUS + LCUNCPLUSPLUS\cr
 NonbankTotal = NonbankTerm + NonbankCheq + NonbankNonCheq = MB2038M2P + MB2042\cr
@@ -150,20 +155,52 @@ to the sample used in Gilbert and Pichette.
 CUadj  changes an estimate of NonbankNonCheq/NonbankTerm split prior 
 to April 1996. This only affects M1++.
 
-The components in this database are not seasonally adjusted, but the
-corresponding Bank of Canada/Statistics Canada B numbers for the seasonally 
-adjusted aggregates are as follows:
+Many of the MB numbers are related to B numbers from Statistics Canada's Cansim series 
+identification system. The correspondence between these related B numbers 
+and V number
+identifiers from the newer Statistics Canada Cansim II system is as follows:
 
 \tabular{ccc}{
- aggregate \tab unadj  \tab SA   \cr
- gross M1  \tab B2054  \tab B1642 \cr
-    M1+    \tab B2060  \tab B1651 \cr
-    M1++   \tab B2061  \tab B1652 \cr
-   net M1  \tab 	      \tab B1627 \cr
-    M2     \tab B2031  \tab B1630 \cr
-    M2+    \tab B2037  \tab B1633 \cr
-    M2++   \tab B2059  \tab B1650 \cr
-    M3     \tab B2030  \tab B1628 \cr
+Cansim ID \tab Cansim II ID \tab \cr
+B451 \tab V36814  \tab personal savings deposits\cr
+B452 \tab V36815  \tab personal chequing deposits\cr
+B453 \tab V36818  \tab personal non-chequing notice deposits\cr
+B454 \tab V36823  \tab personal term deposits\cr
+B472 \tab V36827  \tab non-personal chequing notice deposits\cr
+B473 \tab V36828  \tab non-personal non-chequing deposits\cr
+B475 \tab V36830  \tab non-personal term deposits\cr
+B476 \tab V36809  \tab float \cr
+B478 \tab V36831  \tab demand deposits \cr
+B482 \tab V36876  \tab foreign currency deposits \cr
+B486 \tab V36844  \tab personal chequing accounts (PCA)\cr
+B487 \tab V36845  \tab current accounts deposits\cr
+B2001 \tab V37173 \tab currency \cr
+B2038 \tab V37235 \tab non-bank total deposits \cr
+B2042 \tab V37239 \tab credit unions and caisses populaires total deposits\cr
+B2046 \tab V37243 \tab life insurance \cr
+B2047 \tab V37244 \tab deposits at government owned institutions\cr
+B2048 \tab V37245 \tab money market mutual funds \cr
+B2057 \tab V37255 \tab Canadian savings bonds (CSB)\cr
+B2058 \tab V37256 \tab non-money market mutual funds \cr
+}
+
+
+The components in this database are not seasonally adjusted (SA), but the
+corresponding Bank of Canada / Statistics Canada numbers for the seasonally 
+adjusted aggregates are as follows:
+
+\tabular{ccccc}{
+         \tab           \tab  Monetary Aggregates \tab \tab \cr
+         \tab         \tab             \tab   SA   \tab   SA     \cr
+  	  \tab Cansim \tab Cansim II   \tab Cansim \tab Cansim II\cr
+M1 total  \tab B2033  \tab V37200      \tab B1627  \tab V37124   \cr
+M1 gross  \tab B2054  \tab V37252      \tab B1642  \tab V37141   \cr
+M1+	  \tab B2060  \tab V37258      \tab B1651  \tab V37151   \cr
+M1++	  \tab B2061  \tab V37259      \tab B1652  \tab V37152   \cr
+M2	  \tab B2031  \tab V37198      \tab B1630  \tab V37128   \cr
+M2+	  \tab B2037  \tab V37216      \tab B1633  \tab V37131   \cr
+M2++	  \tab B2059  \tab V37257      \tab B1650  \tab V37150   \cr
+M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
 }
 }
 
@@ -244,7 +281,6 @@ tfplot(MBcomponents, graphs.per.page=3)
 }
 
 \seealso{
-	\code{\link[tframe]{tframe}in the dse bundle of packages}, and
-	\code{\link[dfa]{dfa}}
+	\code{\link[tframe]{tframe}in the dse bundle of packages}
 }
 \keyword{datasets}

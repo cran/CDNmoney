@@ -1,0 +1,41 @@
+citHeader("To cite package 'CDNmoney' in publications please use one or both of:")
+
+citFooter("For BibTex versions of citations use: toBibtex(citation('CDNmoney'))")
+
+citEntry(entry="techreport",
+  author =      personList(as.person("Paul D. Gilbert"),
+                           as.person("Lise Pichette")),
+  year =        2003,
+  title =       "Dynamic Factor Analysis for Measuring Money",
+  institution = "Bank of Canada",
+  address =     "Ottawa, Canada",
+  type =        "Working Paper",
+  number =      "03-21",
+  url  = "http://www.bank-banque-canada.ca/",
+  note =        "Also available at www.bank-banque-canada.ca/pgilbert/",
+
+  textVersion = 
+     paste("Gilbert, Paul D. and Pichette, Lise  (2003)", 
+       "Dynamic Factor Analysis for Measuring Money, ",
+               "Bank of Canada Working Paper 03-21",
+               "<http://www.bank-banque-canada.ca/>",
+               sep="")
+ )
+
+citEntry(entry="techreport",
+  author =    personList(as.person("Jeannie Kottaras")),
+  year =      2003,
+  title =     "The Construction of Continuity-Adjusted Monetary Aggregate Components", 
+  institution = "Bank of Canada",
+  address =   "Ottawa, Canada",
+  type    =   "Working Paper",
+  number =    "22",
+  url  = "http://www.bank-banque-canada.ca/",
+
+  textVersion = 
+     paste("Kottaras, Jeannie (2003)", 
+       "The Construction of Continuity-Adjusted Monetary Aggregate Components, ",
+               "Bank of Canada Working Paper 03-22",
+               "<http://www.bank-banque-canada.ca/>",
+               sep="")
+ )
