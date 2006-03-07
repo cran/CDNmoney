@@ -1,6 +1,7 @@
 \name{CanadianMoneyData}
 \docType{data}
 \alias{CanadianMoneyData}
+\alias{CanadianMoneyData.asof.3Mar2006}
 \alias{CanadianMoneyData.asof.28Jan2005}
 \alias{CanadianMoneyData.asof.6Feb2004}
 \alias{CanadianMoneyData.asof.26Aug2002}
@@ -36,6 +37,7 @@
 
 \usage{
 	data(CanadianMoneyData)
+	data(CanadianMoneyData.asof.3Mar2006)
 	data(CanadianMoneyData.asof.28Jan2005)
 	data(CanadianMoneyData.asof.6Feb2004)
 	data(CanadianMoneyData.asof.26Aug2002)
@@ -213,12 +215,12 @@ M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
 }
 
 \references{
-	Gilbert, P.D. and L. Pichette (2003) "Dynamic Factor Analysis for 
-	   Measuring Money." Bank of Canada
+	Gilbert, P.D. and L. Pichette (2003) Dynamic Factor Analysis for 
+	   Measuring Money. Bank of Canada
 	   Working Paper 2003-21. \url{http://www.bank-banque-canada.ca/pgilbert}.
 
-	Kottaras, J. (2003) "The Construction of Continuity-Adjusted Monetary
-	   Aggregate Components." Bank of Canada Working Paper 2003-22.
+	Kottaras, J. (2003) The Construction of Continuity-Adjusted Monetary
+	   Aggregate Components. Bank of Canada Working Paper 2003-22.
 	   \url{http://www.bank-banque-canada.ca}
 }
 
@@ -281,6 +283,7 @@ tfplot(MBcomponents, graphs.per.page=3)
 }
 
 \seealso{
+	\code{\link{CanadianCreditData}},
 	\code{\link[tframe]{tframe}in the dse bundle of packages}
 }
 \keyword{datasets}

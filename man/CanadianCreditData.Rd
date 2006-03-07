@@ -1,6 +1,7 @@
 \name{CanadianCreditData}
 \docType{data}
 \alias{CanadianCreditData}
+\alias{CanadianCreditData.asof.3Mar2006}
 \alias{CanadianCreditData.asof.28Jan2005}
 \alias{TotalCredit}
 \alias{ConsumerCredit}
@@ -13,6 +14,7 @@
 
 \usage{
 	data(CanadianCreditData)
+	data(CanadianCreditData.asof.3Mar2006)
 	data(CanadianCreditData.asof.28Jan2005)
 }
 
@@ -25,7 +27,8 @@
 	\code{CanadianCreditData} usage loads the most recently version and 
 	other usages loads data as of a given date.
 	
-	These data are the Canadian Credit aggregates.
+	These data are the Canadian Credit aggregates in millions of Canadian
+	dollars.
 	
 
 \tabular{lll}{
@@ -60,7 +63,7 @@ the seasonally adjusted aggregates are as follows:
 }
 
 \references{
-	"Bank of Canada Banking and Financial Statistics table E2"
+	\emph{Bank of Canada Banking and Financial Statistics}. Table E2
 	  \url{http://www.bank-banque-canada.ca}.
 }
 
@@ -82,6 +85,7 @@ the seasonally adjusted aggregates are as follows:
 }
 
 \seealso{
+	\code{\link{CanadianMoneyData}},
 	\code{\link[tframe]{tframe}in the dse bundle of packages}
 }
 \keyword{datasets}
