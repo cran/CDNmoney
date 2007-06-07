@@ -22,11 +22,12 @@ Also, it should be possible to view the pdf version of the guide for this
 package with \emph{print(vignette("CDNmoney"))}.
 
 
-This package contains data used to construct Canadian monetary
+This package contains Canadian credit aggregates data and componenet data 
+used to construct the Canadian monetary
 aggregates. There are are no functions in the package, but the functions in the
 \emph{ts} and \emph{tframe} packages may be useful for working with the data. Also, the
-package \emph{dfa} is being used for research with this data at the Bank of Canada.
+package \emph{tsfa} is being used for research with this data at the Bank of Canada.
 
-The data is documented under \emph{CanadianMoneyData} in the help
-system.
+The data is documented under \emph{CanadianMoneyData} and 
+\emph{CanadianCreditData} in the help system.
 \end{document}

@@ -1,6 +1,7 @@
 \name{CanadianMoneyData}
 \docType{data}
 \alias{CanadianMoneyData}
+\alias{CanadianMoneyData.asof.5Jun2007}
 \alias{CanadianMoneyData.asof.3Mar2006}
 \alias{CanadianMoneyData.asof.28Jan2005}
 \alias{CanadianMoneyData.asof.6Feb2004}
@@ -25,18 +26,46 @@
 \alias{MB482}
 \alias{M1total}
 \alias{M1real}
+\alias{M1pReal}
 \alias{M1PerCapita}
+\alias{M1pPerCapita}
 \alias{float}
 \alias{TMLinterbank}
 \alias{MB452adj}
 \alias{MB473adj}
 \alias{CUadj}
 
+\alias{MV37173}
+\alias{MV41552775p}
+\alias{MV41552775}
+\alias{MV41552777p}
+\alias{MV36818}
+\alias{MV36823}
+\alias{MV41552777}
+\alias{MV36828}
+\alias{MV37243}
+\alias{MV37244}
+\alias{MV37245}
+\alias{MV37255}
+\alias{MV37256}
+\alias{MV36830}
+\alias{MV36876}
+\alias{adjM1p}
+\alias{adjM1pp}
+
+\alias{NetNonbankCheq}
+\alias{V37173}
+\alias{V37243}
+\alias{V37245}
+\alias{V37255}
+\alias{V37256}
+
 \title{Continuity Adjusted Component Data for Canadian Monetary Aggregates}
 \description{Components of the Canadian Monetary aggregates.}
 
 \usage{
 	data(CanadianMoneyData)
+	data(CanadianMoneyData.asof.5Jun2007)
 	data(CanadianMoneyData.asof.3Mar2006)
 	data(CanadianMoneyData.asof.28Jan2005)
 	data(CanadianMoneyData.asof.6Feb2004)
@@ -48,9 +77,10 @@
 }
 
 \details{
-	Several data objects are loaded, as listed in the table below. The 
-	\code{CanadianMoneyData} usage loads the most recently version and 
-	other usages loads data as of a given date.
+	Several data objects are loaded, as listed in the table
+	''New Variable definitions''. The 
+	\code{CanadianMoneyData} usage loads the most recent version and 
+	other usages loads data as of the given date.
 	
 	These data are the components of the Canadian Monetary aggregates.
 	They have been "continuity adjusted" so that take-overs and mergers do
@@ -70,9 +100,135 @@
 	reason the "as of" data may not be especially useful for some kinds of
 	data revision studies.
 
-\tabular{lll}{
+In January 2007 the aggregates M1 gross and M1 total (sometimes called M1 net)
+were discontinued, and M2, M2+, M2++, and M3 were modified to "gross" versions. 
+The earlier CanadianMoneyData sets contain these series, but more recent ones 
+do not. Components as of January 2007 are as shown in 
+table ''New Variable definitions''.
+
+\begin{table}
+\caption{New Variable definitions}
+\begin{center}
+\begin{tabular}{lll}
+\hline 
+\hline 
  variable (ID)   \tab short description    \tab longer description \cr 
+\hline 
    \tab \tab \cr 
+ V37258      	 \tab gross M1+  \tab \cr
+ V37259      	 \tab gross M1++ \tab \cr
+ V41552786   	 \tab gross M2   \tab \cr
+ V41552788   	 \tab gross M2+  \tab \cr
+ V41552790   	 \tab gross M2++ \tab \cr
+ V41552785   	 \tab gross M3   \tab \cr
+
+ V37173  	 \tab currency  	   \tab currency outside banks\cr
+ MV41552775  	 \tab personal chequing		   \tab personal chequing accounts at banks\cr
+ MV41552777 	 \tab N-P chequing notice  \tab non-personal chequable notice\cr
+ MV36818  	 \tab pers non-cheq notice   \tab personal notice - non-chequable at banks\cr
+ NetNonbankCheq	 \tab Net Non-bank Cheq	   \tab chequing accounts at non-banks less TMLinterbank\cr
+ GrossNonbankCheq\tab Non bank Chequing	   \tab chequing accounts at non-banks \cr
+ MV36828  	 \tab N-P non-chequing 	   \tab non-personal, non-chequable accounts at banks\cr
+ NonbankNonCheq  \tab Non-bank Non-Cheq	   \tab non-chequing accounts at non-banks\cr
+ MV36823  	 \tab personal term 	   \tab personal term at banks\cr
+ NonbankTerm	 \tab Non-bank Term	   \tab term deposits at non-banks\cr
+ V37243 	 \tab life insurance	   \tab individual annuities at life insurance co.\cr
+ MV37244	 \tab dep at gov inst      \tab deposits at government institutions\cr
+ V37245 	 \tab mmmf		   \tab money market mutual funds\cr
+ V37255 	 \tab CSB		   \tab Canadian saving bonds\cr
+ V37256 	 \tab non-mmmf 	    	   \tab non-money market mutual funds\cr
+ MV36830  	 \tab N-P term deposits	   \tab non-personal term at banks\cr
+ MV36876  	 \tab Fgn curr deposits	   \tab Foreign currency deposits of residents\cr
+
+ MV37235  	 \tab GrossNonbankTotal	   \tab Total Deposits at Trust and Mortgage Loan Companies\cr
+ TMLinterbank	 \tab TML dep. at banks    \tab Deposits of trust mortgage and loan companies at banks\cr 
+\hline
+   \tab \tab \cr 
+ adjM1p	 \tab pre-1982 problem      \tab \cr
+ adjM1pp	 \tab pre-1982 problem      \tab \cr
+ CUadj  	 \tab CU estimate fix	    \tab fix for poor Statcan estimate of Nonbank non-cheq vs\cr
+  	         \tab  	                    \tab Term split for one Credit Union prior to April 1996\cr
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table ''Composition of the Monetary Aggregates'' indicates how the 
+components are added for the Bank of
+Canada monetary aggregates. This version of the table is for new monetary 
+aggregates released in January 2007.  
+
+\begin{table}
+\caption{Composition of the Monetary Aggregates}
+\begin{center}
+\begin{tabular}{lccccccc}
+\hline 
+\hline
+ \tab  \tab          \tab      \tab      Monetary \tab Aggregate \tab      \tab     \cr
+     	         \tab                      \tab gross  \tab gross \tab gross     \tab  gross    \tab gross     \tab gross   \cr
+     	         \tab                      \tab M1+    \tab M1++  \tab  M2       \tab   M2+     \tab  M2++     \tab   M3    \cr
+variable (ID)    \tab short desciption \cr 
+\hline
+\cr 
+ V37173  	 \tab currency  	    \tab  X	\tab   X   \tab    X	  \tab  X	 \tab	X	\tab  X      \cr
+ MV41552775  	 \tab pers cheq		    \tab  X	\tab   X   \tab    X	  \tab  X	 \tab	X	\tab  X      \cr
+ MV41552777  	 \tab N-P cheq notice	    \tab  X	\tab   X   \tab    X	  \tab  X	 \tab	X	\tab  X      \cr
+ MV36818  	 \tab pers n-cheq notice    \tab	\tab   X   \tab    X	  \tab  X	 \tab	X	\tab  X      \cr
+ NetNonbankCheq	 \tab NetNonbankCheq	    \tab  X	\tab   X   \tab 	  \tab  X	 \tab	X	\tab	     \cr
+ MV36828  	 \tab N-P n-cheq 	    \tab	\tab   X   \tab    X	  \tab  X	 \tab	X	\tab  X      \cr
+ NonbankNonCheq  \tab NonbankNonCheq	    \tab	\tab   X   \tab 	  \tab  X	 \tab	X	\tab	     \cr
+ MV36823  	 \tab pers term 	    \tab	\tab	   \tab    X	  \tab  X	 \tab	X	\tab  X      \cr
+ NonbankTerm	 \tab NonbankTerm	    \tab	\tab	   \tab 	  \tab  X	 \tab	X	\tab	     \cr
+ V37243 	 \tab life insur	    \tab	\tab	   \tab 	  \tab  X	 \tab	X	\tab	     \cr
+ MV37244	 \tab dep at gov inst       \tab	\tab	   \tab 	  \tab  X	 \tab	X	\tab	     \cr
+ V37245 	 \tab mmmf		    \tab	\tab	   \tab 	  \tab  X	 \tab	X	\tab	     \cr
+ V37255 	 \tab CSB		    \tab	\tab	   \tab 	  \tab  	 \tab	X	\tab	     \cr
+ V37256 	 \tab non-mmmf 	    	    \tab	\tab	   \tab 	  \tab  	 \tab	X	\tab	     \cr
+ MV36830  	 \tab N-P term dep	    \tab	\tab	   \tab 	  \tab  	 \tab		\tab  X      \cr
+ MV36876  	 \tab Fgn curr dep	    \tab	\tab	   \tab 	  \tab  	 \tab		\tab  X      \cr
+\hline					    \tab	\tab	   \tab 	  \tab  	 \tab		\tab	     \cr
+\cr 
+ adjM1p	 	 \tab pre-1982 problem      \tab  X	\tab	   \tab 	  \tab  	 \tab		\tab	     \cr
+ adjM1pp	 \tab pre-1982 problem      \tab	\tab   X   \tab 	  \tab  	 \tab		\tab	     \cr
+ CUadj  	 \tab CU estimate fix	    \tab	\tab   X   \tab 	  \tab  	 \tab		\tab	     \cr
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+
+X means included;
+float is now included in all (gross) aggregates.
+
+NetNonbankCheq   = TMLCHEQPLUS + LCUCHEQPLUS - TMLinterbank;
+
+NonbankNonCheq = TMLNCPLUSPLUS + LCUNCPLUSPLUS;
+
+NetNonbankTotal= MV37235 + MV37239 - TMLinterbank;
+
+use  NetNonbankTotal = NonbankTerm + NonbankCheq + NetNonbankNonCheq 
+
+to get   NonbankTerm = NetNonbankTotal - (NetNonbankCheq + NonbankNonCheq);
+
+adjM1pp ( = adjV37210 - adjV37213 ) adjustment is only for data prior 
+to the sample used in Gilbert and Pichette.
+
+CUadj  changes an estimate of NonbankNonCheq/NonbankTerm split prior 
+to April 1996. This only affects M1++.
+\end{table}
+
+
+
+Previously the components were defined using the B-number designations. The
+variables were as shown in table ''Previously Components Definitions''.
+\begin{table}
+\caption{Previously Components Definitions}
+\begin{center}
+\begin{tabular}{lll}
+\hline 
+\hline 
+ variable (ID)   \tab short description    \tab longer description \cr 
+\hline 
+\cr
  MB2001  	 \tab currency  	   \tab currency outside banks\cr
  MB486  	 \tab PCA		   \tab personal chequing accounts at banks\cr
  MB487p 	 \tab CA other demand	   \tab current accounts at banks\cr
@@ -92,30 +248,39 @@
  MB2058  	 \tab non-mmmf  	   \tab non-money market mutual funds\cr
  MB475  	 \tab N-P term dep	   \tab non-personal term at banks\cr
  MB482  	 \tab Fgn curr dep	   \tab Foreign currency deposits of residents\cr
-
-
  MB451  	 \tab Pers savings	   \tab MB452 + MB453 + MB454\cr
  MB478  	 \tab Demand deposits	   \tab Chartered bank net demand deposits\cr
- MB2038  	 \tab NonbankTotal	   \tab Total Deposits at Trust & Mortgage Loan Companies\cr
-
-
+ MB2038  	 \tab NonbankTotal	   \tab Total Deposits at Trust and Mortgage Loan Companies\cr
+\hline 
+\cr
  float  	 \tab B476                 \tab checks and deposits "in transit"\cr 
  TMLinterbank	 \tab TML depostis at banks \tab Deposits of trust mortgage and loan companies at banks\cr
  MB452adj	 \tab pre-1982 problem      \tab \cr
  MB473adj	 \tab pre-1982 problem      \tab \cr
  CUadj  	 \tab CU estimate fix	    \tab fix for poor Statcan estimate of NonbankNonCheq/NonbankTerm split for one Credit Union prior to April 1996\cr
-}
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
 
-The following table indicates how these components are added for the Bank of
-Canada monetary aggregates. The column on the left indicates how they are
+
+
+The ''Previous Canadain Monetary Aggregates'' table indicates how these components were added for the Bank of
+Canada monetary aggregates in the past. The column on the left indicates how they are
 combined to form components for factor estimates as in Gilbert and Pichette (2003).
-\newpage
-\tabular{lccccccccc}{
- \tab  \tab ----- \tab ---- \tab ---- \tab Monetary \tab Aggregate \tab ---- \tab ---- \tab ---- \cr
+\begin{table}
+\caption{Previous Canadain Monetary Aggregates}
+\begin{center}
+\begin{tabular}{lccccccccc}
+\hline 
+\hline 
+ \tab  \tab          \tab      \tab     \tab Monetary \tab Aggregate \tab      \tab     \tab   \cr
     \tab  	      \tab	  \tab netM1= \tab     \tab	 \tab	    \tab      \tab	\tab \cr
     \tab  	      \tab grossM1\tab totalM1\tab M1+ \tab M1++ \tab  M2   \tab M2+  \tab M2++  \tab M3 \cr
 comp. \tab variable (ID) \tab B2054  \tab B2033 \tab B2060\tab B2061\tab B2031 \tab B2037 \tab B2059 \tab B2030 \cr 
  \tab  \tab \tab \tab \tab \tab \tab \tab \tab \cr
+\hline 
+\cr
  1 \tab MB2001        \tab X \tab   X   \tab  X  \tab   X \tab    X  \tab  X  \tab   X  \tab  X \cr
  2 \tab MB486	      \tab X \tab   X	\tab  X  \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
  4 \tab MB487PLUS     \tab X \tab   X	\tab  X  \tab	X \tab    X  \tab  X  \tab   X  \tab  X \cr
@@ -134,13 +299,16 @@ comp. \tab variable (ID) \tab B2054  \tab B2033 \tab B2060\tab B2061\tab B2031 \
  6 \tab MB2058        \tab   \tab	\tab	 \tab	  \tab       \tab     \tab   X  \tab	\cr
  5 \tab MB475	      \tab   \tab	\tab	 \tab	  \tab       \tab     \tab	\tab  X \cr
  6 \tab MB482	      \tab   \tab	\tab	 \tab	  \tab       \tab     \tab	\tab  X \cr
- \tab \tab \tab \tab \tab \tab \tab \tab \tab \cr
+\hline 
+\cr
    \tab float MB476    \tab + \tab   -   \tab  +  \tab   + \tab    -  \tab  -  \tab   -  \tab  - \cr
    \tab TMLinterbank   \tab X \tab   X   \tab	  \tab     \tab       \tab     \tab	 \tab	 \cr
    \tab MB452adj       \tab   \tab	 \tab  X  \tab     \tab       \tab     \tab	 \tab	 \cr
    \tab MB473adj       \tab   \tab	 \tab	  \tab   X \tab       \tab     \tab	 \tab	 \cr
    \tab CUadj	       \tab   \tab	 \tab	  \tab   X \tab       \tab     \tab	 \tab	 \cr
-}
+\hline 
+\end{tabular}
+\end{center}
 
  X- included\cr  
  + float is in\cr
@@ -156,14 +324,23 @@ to the sample used in Gilbert and Pichette.
 
 CUadj  changes an estimate of NonbankNonCheq/NonbankTerm split prior 
 to April 1996. This only affects M1++.
+\end{table}
 
 Many of the MB numbers are related to B numbers from Statistics Canada's Cansim series 
 identification system. The correspondence between these related B numbers 
 and V number
-identifiers from the newer Statistics Canada Cansim II system is as follows:
+identifiers from the newer Statistics Canada Cansim II system is as 
+shown in table ''Bank of Canada / Statistics Canada Cansim I and II numbers''.
 
-\tabular{ccc}{
+\begin{table}
+\caption{Bank of Canada / Statistics Canada Cansim I and II numbers}
+\begin{center}
+\begin{tabular}{ccc}
+\hline 
+\hline 
 Cansim ID \tab Cansim II ID \tab \cr
+\hline 
+\cr 
 B451 \tab V36814  \tab personal savings deposits\cr
 B452 \tab V36815  \tab personal chequing deposits\cr
 B453 \tab V36818  \tab personal non-chequing notice deposits\cr
@@ -184,17 +361,26 @@ B2047 \tab V37244 \tab deposits at government owned institutions\cr
 B2048 \tab V37245 \tab money market mutual funds \cr
 B2057 \tab V37255 \tab Canadian savings bonds (CSB)\cr
 B2058 \tab V37256 \tab non-money market mutual funds \cr
-}
-
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
 
 The components in this database are not seasonally adjusted (SA), but the
 corresponding Bank of Canada / Statistics Canada numbers for the seasonally 
-adjusted aggregates are as follows:
+adjusted aggregates are as shown in table ''Monetary Aggregates and SA numbers''.
 
-\tabular{ccccc}{
+\begin{table}
+\caption{Monetary Aggregates and SA numbers}
+\begin{center}
+\begin{tabular}{ccccc}
+\hline 
+\hline 
          \tab           \tab  Monetary Aggregates \tab \tab \cr
          \tab         \tab             \tab   SA   \tab   SA     \cr
   	  \tab Cansim \tab Cansim II   \tab Cansim \tab Cansim II\cr
+\hline 
+\cr 
 M1 total  \tab B2033  \tab V37200      \tab B1627  \tab V37124   \cr
 M1 gross  \tab B2054  \tab V37252      \tab B1642  \tab V37141   \cr
 M1+	  \tab B2060  \tab V37258      \tab B1651  \tab V37151   \cr
@@ -203,7 +389,11 @@ M2	  \tab B2031  \tab V37198      \tab B1630  \tab V37128   \cr
 M2+	  \tab B2037  \tab V37216      \tab B1633  \tab V37131   \cr
 M2++	  \tab B2059  \tab V37257      \tab B1650  \tab V37150   \cr
 M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
-}
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+
 }
 
 
@@ -226,10 +416,33 @@ M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
 
 \examples{
  require("tframe")
+########### Calculations to get new monetary aggregates ######
  data("CanadianMoneyData", package="CDNmoney")
-########### Calculations to get monetary aggregates ######
 
- M1gross <-  tframed(MB2001 + MB486 + MB487p + TMLinterbank, names="gross M1 (B2054)")
+M1p  <- tframed(V37173 + MV41552775 + MV41552777 + NetNonbankCheq + adjM1p, names="M1+ (V37258)")
+
+M1pp <-  tframed(CUadj + M1p   + MV36818 + MV36828 + adjM1pp + NonbankNonCheq, names="gross M1++ (V37259)")
+
+M2   <-  tframed(V37173 + MV41552775  + MV41552777 + MV36818 + MV36828 + MV36823, names="gross M2 (V37198)")
+
+M2p  <-  tframed(M2    + NetNonbankCheq + NonbankNonCheq + NonbankTerm +
+                          + V37243 + MV37244 + V37245, names="gross M2+ (V37216)")
+
+M2pp <-  tframed(M2p   + V37255 + V37256, names="gross M2++ (V37257)")
+
+M3   <-  tframed(M2    + MV36830 + MV36876, names="gross M3 (V37197)")
+
+######### Plot aggregates #####
+
+ tfplot(tbind(M1p, M1pp))
+ tfplot(tbind(M1pPerCapita, M1pReal))
+ tfplot(tbind(M2, M2p, M2pp))
+ tfplot(M3)
+
+########### Calculations to get old monetary aggregates ######
+ data("CanadianMoneyData.asof.3Mar2006", package="CDNmoney")
+
+ #M1gross <-  tframed(MB2001 + MB486 + MB487p + TMLinterbank, names="gross M1 (B2054)")
  M1p     <-  tframed(MB2001 + MB486 + MB487p + MB452 + MB452adj + MB472
    + NonbankCheq, names="M1+ (B2060)")
  M1pp    <-  tframed(CUadj + M1p   + MB453 + MB473 + MB473adj + NonbankNonCheq,
@@ -247,20 +460,28 @@ M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
  #  M1PerCapita = M1total * 100 /(pop * p100000) # using a quarterly population
  #       series converted to monthly using spline.
  
- cpi <- 100 * M1total / M1real
+ # cpi <- 100 * M1total / M1real
+ # seriesNames(cpi) <- "CPI"
+ 
+ # popm <- M1total / M1PerCapita
+ # seriesNames(popm) <- "Population of Canada"
+
+ cpi <- 100 * M1p / M1pReal
  seriesNames(cpi) <- "CPI"
  
- popm <- M1total / M1PerCapita
+ popm <- M1p / M1pPerCapita
  seriesNames(popm) <- "Population of Canada"
 
 ######### Plot aggregates #####
 
- tfplot(tbind(M1total, M1gross, M1p, M1pp))
- tfplot(tbind(M1PerCapita, M1real))
+ #tfplot(tbind(M1total, M1gross, M1p, M1pp))
+ tfplot(tbind(M1p, M1pp))
+ tfplot(tbind(M1pPerCapita, M1pReal))
  tfplot(tbind(M2, M2p, M2pp))
  tfplot(M3)
 
 #### Calculations to get components as used in Gilbert and Pichette ####
+ data("CanadianMoneyData.asof.3Mar2006", package="CDNmoney")
 
 z <-tfwindow(tframed(tbind(
      MB2001,
