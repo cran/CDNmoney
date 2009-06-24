@@ -1,6 +1,7 @@
 \name{CanadianCreditData}
 \docType{data}
 \alias{CanadianCreditData}
+\alias{CanadianCreditData.asof.6Mar2009}
 \alias{CanadianCreditData.asof.5Jun2007}
 \alias{CanadianCreditData.asof.3Mar2006}
 \alias{CanadianCreditData.asof.28Jan2005}
@@ -15,6 +16,7 @@
 
 \usage{
 	data(CanadianCreditData)
+	data(CanadianCreditData.asof.6Mar2009)
 	data(CanadianCreditData.asof.5Jun2007)
 	data(CanadianCreditData.asof.3Mar2006)
 	data(CanadianCreditData.asof.28Jan2005)
@@ -33,52 +35,42 @@
 	These data are the Canadian Credit aggregates in millions of Canadian
 	dollars.
 	
-\begin{table}
-\caption{Canadian Credit Variable Definitions}
-\begin{center}
-\begin{tabular}{lll}
-\hline 
-\hline 
+\strong{Canadian Credit Variable Definitions}
+
+\tabular{lll}{
+%\eqn{\hline}{\tab \tab  \cr}
+%\eqn{\hline}{\tab \tab  \cr}
  variable (ID)   \tab short description    \tab longer description \cr 
-\hline 
-   \tab \tab \cr 
+%\eqn{\hline}{\tab \tab  \cr} 
  TotalCredit  	         \tab total credit	         \tab total household and business credit\cr
  ConsumerCredit  	 \tab consumer credit  	         \tab total consumer credit\cr
  ResidentialMortgage  	 \tab residential mortgage  	 \tab total residential mortgage  credit\cr
  ShortTermBusinessCredit \tab short term-business credit \tab total short-term business credit\cr
  OtherBusinessCredit  	 \tab other business credit  	 \tab total other business credit\cr
-\hline 
-\end{tabular}
-\end{center}
-\end{table}
-
-
+%\eqn{\hline}{\tab \tab  \cr} 
+}
 
 The components in this database are not seasonally adjusted (SA), but the
 corresponding Bank of Canada / Statistics Canada Cansim II numbers for 
 the seasonally adjusted aggregates are as as shown in 
 table ''Bank of Canada / Statistics Canada Cansim II numbers''.
 
-\begin{table}
-\caption{Bank of Canada / Statistics Canada Cansim II numbers}
-\begin{center}
-\begin{tabular}{lll}
-\hline 
-\hline 
+\strong{Bank of Canada / Statistics Canada Cansim II numbers}
+
+\tabular{lll}{
+%\eqn{\hline}{\tab \tab  \cr} 
+%\eqn{\hline}{\tab \tab  \cr} 
          \tab	unadjusted  \tab   SA	\cr
-\hline 
+%\eqn{\hline}{\tab \tab  \cr} 
          \tab	            \tab    	\cr
  TotalCredit  	         \tab v122644	 \tab v122648  \cr
  ConsumerCredit  	 \tab v122698	 \tab v122707  \cr
  ResidentialMortgage  	 \tab v122736	 \tab v122746  \cr
  ShortTermBusinessCredit \tab v122639	 \tab v122646  \cr
  OtherBusinessCredit  	 \tab v36412	 \tab          \cr
-\hline 
-\end{tabular}
-\end{center}
-\end{table}
+%\eqn{\hline}{\tab \tab  \cr} 
 }
-
+}
 
 \source{
 	Aggregates are from the \emph{Bank of Canada}
