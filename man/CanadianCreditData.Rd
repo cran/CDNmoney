@@ -84,6 +84,7 @@ table ''Bank of Canada / Statistics Canada Cansim II numbers''.
 
 \examples{
  require("tframe")
+ require("tfplot")
  data("CanadianCreditData", package="CDNmoney")
 
  tfplot(TotalCredit, ConsumerCredit, ResidentialMortgage,

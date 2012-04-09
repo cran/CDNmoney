@@ -1,5 +1,6 @@
 
 require("CDNmoney")
+require("tfplot")
 
 data("CanadianMoneyData.asof.26Aug2002", package="CDNmoney")
 

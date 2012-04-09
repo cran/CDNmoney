@@ -1,7 +1,8 @@
 data("CanadianMoneyData.asof.3Mar2006", package="CDNmoney")
 
 if(!require("tframe")) stop("This test requires the tframe package.")
-  
+if(!require("tfplot")) stop("This test requires the tfplot package.")
+
 cat("################ Calculations to get monetary aggregates\n")
 
 M1gross <-  tframed(MB2001 + MB486 + MB487p + TMLinterbank, names="gross M1 (B2054)")

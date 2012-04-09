@@ -397,15 +397,15 @@ M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
 \references{
 	Gilbert, P.D. and L. Pichette (2003) Dynamic Factor Analysis for 
 	   Measuring Money. Bank of Canada
-	   Working Paper 2003-21. \url{http://www.bank-banque-canada.ca/pgilbert}.
+	   Working Paper 2003-21. \url{http://www.bankofcanada.ca/2003/07/publications/research/working-paper-2003-21/}.
 
 	Kottaras, J. (2003) The Construction of Continuity-Adjusted Monetary
-	   Aggregate Components. Bank of Canada Working Paper 2003-22.
-	   \url{http://www.bank-banque-canada.ca}
+	   Aggregate Components. Bank of Canada Working Paper 2003-22.	   \url{http://www.bankofcanada.ca/2003/08/publications/research/working-paper-2003-22/}
 }
 
 \examples{
  require("tframe")
+ require("tfplot")
 ########### Calculations to get new monetary aggregates ######
  data("CanadianMoneyData", package="CDNmoney")
 
@@ -423,7 +423,6 @@ M2pp <-  tframed(M2p   + V37255 + V37256, names="gross M2++ (V41552790)")
 M3   <-  tframed(M2    + MV36830 + MV36876, names="gross M3 (V41552785)")
 
 ######### Plot aggregates #####
-
  tfplot(tbind(currencyPerCapita, currencyReal))
  tfplot(tbind(M1p, M1pp))
  tfplot(tbind(M2, M2p, M2pp))

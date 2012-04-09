@@ -11,14 +11,12 @@ citEntry(entry="techreport",
   address =     "Ottawa, Canada",
   type =        "Working Paper",
   number =      "03-21",
-  url  = "http://www.bank-banque-canada.ca/",
-  note =        "Also available at www.bank-banque-canada.ca/pgilbert/",
+  url  = "http://www.bankofcanada.ca/2003/07/publications/research/working-paper-2003-21/",
 
   textVersion = 
      paste("Gilbert, Paul D. and Pichette, Lise  (2003)", 
        "Dynamic Factor Analysis for Measuring Money, ",
-               "Bank of Canada Working Paper 03-21",
-               "<http://www.bank-banque-canada.ca/>",
+               "Bank of Canada Working Paper 03-21", "<http://www.bankofcanada.ca/2003/07/publications/research/working-paper-2003-21/>",
                sep="")
  )
 
@@ -30,12 +28,12 @@ citEntry(entry="techreport",
   address =   "Ottawa, Canada",
   type    =   "Working Paper",
   number =    "22",
-  url  = "http://www.bank-banque-canada.ca/",
+  url  = "http://www.bankofcanada.ca/2003/08/publications/research/working-paper-2003-22/",
 
   textVersion = 
      paste("Kottaras, Jeannie (2003)", 
        "The Construction of Continuity-Adjusted Monetary Aggregate Components, ",
                "Bank of Canada Working Paper 03-22",
-               "<http://www.bank-banque-canada.ca/>",
+               "<http://www.bankofcanada.ca/2003/08/publications/research/working-paper-2003-22/>",
                sep="")
  )
