@@ -409,11 +409,14 @@ M3	  \tab B2030  \tab V37197      \tab B1628  \tab V37125   \cr
 ########### Calculations to get new monetary aggregates ######
  data("CanadianMoneyData", package="CDNmoney")
 
-M1p  <- tframed(V37173 + MV41552775 + MV41552777 + NetNonbankCheq + adjM1p, names="M1+ (V37258)")
+M1p  <- tframed(V37173 + MV41552775 + MV41552777 + NetNonbankCheq + adjM1p, 
+                names="M1+ (V37258)")
 
-M1pp <-  tframed(CUadj + M1p   + MV36818 + MV36828 + adjM1pp + NonbankNonCheq, names="gross M1++ (V37259)")
+M1pp <-  tframed(CUadj + M1p   + MV36818 + MV36828 + adjM1pp + NonbankNonCheq, 
+                 names="gross M1++ (V37259)")
 
-M2   <-  tframed(V37173 + MV41552775  + MV41552777 + MV36818 + MV36828 + MV36823, names="gross M2 (V41552786)")
+M2   <-  tframed(V37173 + MV41552775  + MV41552777 + MV36818 + MV36828 + MV36823, 
+                 names="gross M2 (V41552786)")
 
 M2p  <-  tframed(M2    + NetNonbankCheq + NonbankNonCheq + NonbankTerm +
                           + V37243 + MV37244 + V37245, names="gross M2+ (V41552788)")

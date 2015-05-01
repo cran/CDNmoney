@@ -1,3 +1,7 @@
+Changes in CDNmoney version 2012.4-2
+
+   o	Minor format adjustment to avoid note about long lines in Rd file.
+
 Changes in CDNmoney version 2012.4-1
 
    o	Added tfplot to Suggests.
